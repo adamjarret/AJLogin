@@ -1,0 +1,464 @@
+/*******************************************
+ *******************************************
+	AJLogin v4.1
+	By: Adam Jarret
+	RandomRavings.com
+ *******************************************
+ *******************************************/
+
+body,td,p,a {
+	font-family: Verdana;
+	font-size: 10pt;
+}
+
+body { 
+	padding: 0px;
+	margin: 0px;
+}
+
+a:link {
+	color: #003366;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #003366;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #003366;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #000000;
+	text-decoration: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+table {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	border-collapse: collapse;
+	border-spacing: 0;
+	outline: none;
+}
+
+img {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	border-collapse: collapse;
+	vertical-align: middle;
+}
+
+fieldset {
+	border: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+input {
+	font-family: Verdana;
+	font-size: 9pt;
+}
+
+h2 {
+	font-size: 12pt;
+	margin-top: 0px;
+	padding-top: 10px;
+}
+
+textarea#b {
+	height: 500px;
+}
+
+.page-header {
+	width: 100%;
+	text-align: center;
+}
+
+.status {
+	text-align: center;
+	background-color: #FFFFCC;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+
+.status p {
+	font-family: Verdana; 
+	font-size: 12pt;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+
+.status p a {
+	font-family: Verdana; 
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+.instructions-wrapper {
+	background-color: #B0C4DE;
+	padding: 10px;
+}
+
+.instructions {
+	width: 600px;
+	text-align: left;
+	margin: 0 auto;
+}
+
+.code {
+	font-family: "Courier New", Courier, mono;
+	font-size: 14px;
+}
+
+.page-title {
+	font-family: Verdana; 
+	font-size: 14pt;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	display: inline;
+}
+
+.utility-form-div {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.utility-form-div label {
+	display: block;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.utility-form-div .text-input {
+	width: 400px;
+}
+
+.utility-form-div #s {
+	margin-top: 20px;
+}
+
+.utility-form-bottom-links-div {
+	text-align: center;
+	padding: 10px;
+}
+
+.checkbox-group {
+	margin: 20px 0px;
+}
+
+.checkbox-group label {
+	display: inline !important;
+	font-weight: normal;
+}
+
+.member-form {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.member-form label {
+	display: block;
+}
+
+.member-form .label {
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.member-form .text-input {
+	width: 300px;
+}
+
+.member-form #MemberAccessLevel {
+	width: 50px;	
+}
+
+label.error {
+	margin-bottom: 20px;
+	color: red;
+}
+
+.submit-button {
+	margin-top: 10px;
+}
+
+.page-stripe {
+	text-align:center;
+	background-color:#EEEEEE;
+	padding-top:10px;
+	padding-bottom:15px;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+#member_table {
+	border-bottom: 1px solid #000000;
+}
+
+#member_table td {
+	border: 1px solid #000000;
+	padding: 5px;
+}
+
+#member_table th {
+	border: 1px solid #000000;
+	padding: 5px;
+	white-space: nowrap;
+	cursor: pointer;
+	cursor: hand;
+	width: 300px;
+	text-align: left;
+}
+
+#member_table #control {
+	width: 140px;
+	background: #EEEEEE;
+	cursor: default;
+	text-align: left;
+}
+
+#member_table #control.headerSortUp {
+	background: #EEEEEE;
+	cursor: default;
+}
+
+#member_table #control.headerSortDown {
+	background: #EEEEEE;
+	cursor: default;
+}
+
+#member_table .control {
+	white-space: nowrap;
+}
+
+#why_to {
+	font-size: 8pt;
+}
+
+#member_table #MemberIndex {
+	width: 70px;
+}
+
+#member_table #MemberAccessLevel {
+	width: 70px;
+}
+
+#member_table #MemberConfirmed {
+	width: 100px;
+	min-width: 100px;
+	white-space:normal;
+	text-align: left;
+}
+
+#member_table .MemberConfirmed {
+	text-align: center;
+}
+
+#member_table #MemberApproved {
+	width: 100px;
+	min-width: 100px;
+	white-space:normal;
+	text-align: left;
+}
+
+#member_table .MemberApproved {
+	text-align: center;
+}
+
+#member_table .date {
+	width: 200px;
+}
+
+
+.header {
+	background: #EEEEEE url('images/bg.gif') no-repeat center right;
+}
+
+.header.headerSortUp {
+	background: #EEEEEE url('images/asc.gif') no-repeat center right; 
+}
+
+.header.headerSortDown {
+	background: #EEEEEE url('images/desc.gif') no-repeat center right; 
+}
+
+.header span {
+	margin-right: 20px;
+}
+
+#admin-current-user {
+	font-size: 11pt;
+}
+
+#filter {
+	width: 270px;
+}
+
+#filter-box {
+	width: 280px;
+	border: 1px solid #000000;
+	border-collapse: collapse;
+	border-spacing: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+#filter-box div {
+	padding-bottom:10px;
+}
+
+#filter-box .filter-form-item {
+	display: block;
+}
+
+#filter-count-wrapper {
+	font-weight: normal;
+	font-size: 10pt;
+}
+
+.hide {
+	display: none;
+}
+
+.icon {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.icon-delete {
+}
+
+.icon-approve {
+}
+
+.icon-unapprove {
+}
+
+.icon-confirm {
+}
+
+.icon-unconfirm {
+}
+
+#admin_bulk_acitons_div {
+	border: 1px solid #000000;
+	width: 280px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.admin-bulk-aciton {
+	float: left;
+}
+
+.admin-bulk-aciton-buton {
+	margin-bottom: 10px;
+}
+
+.admin-bulk-aciton-buton img {
+	margin-right: 10px;
+}
+
+#select-controls {
+}
+
+#select-all {
+	cursor: pointer;
+	cursor: hand;
+	color: #003366;
+	font-weight: bold;
+	margin: 0px;
+}
+
+#select-none {
+	cursor: pointer;
+	cursor: hand;
+	color: #003366;
+	font-weight: bold;
+	margin: 0px;
+}
+
+#admin-new-member-button {
+	margin-top: 10px;
+}
+
+#admin-new-member-div {
+	width: 200px;
+	margin: 0 auto;
+}
+
+#admin-left-column {
+	width: 300px;
+	position: absolute;
+}
+
+#admin-right-column {
+	left: 320px;
+	position: absolute;
+}
+
+
+
+.reset-password-form {
+	width: 300px;
+	margin: 30px auto;
+	padding-top: 20px;
+	border-top: 1px solid #000000;
+}
+
+.reset-password-form label {
+	display: block;
+}
+
+.reset-password-form .label {
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.reset-password-form .text-input {
+	width: 300px;
+}
+
+.reset-password-form h2 {
+	margin: 0px;
+}
+
+.reset-password-form #MemberAccessLevel {
+	width: 50px;	
+}
+
+.post-passowrd-reset-login-link {
+	text-align: center;
+}
+
+.ajlogin-clear {
+	clear: both;
+}
+
+.ajlogin-install .checkbox-group {
+	display: none;
+}
+
+/*******************************************
+ *******************************************
+	AJLogin v4.1
+	By: Adam Jarret
+	RandomRavings.com
+ *******************************************
+ *******************************************/

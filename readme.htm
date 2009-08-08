@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<title>AJLogin v4.1 Help File</title>
+<link rel="stylesheet" href="ajlogin.css" type="text/css">
+<style type="text/css">
+<!--
+li {
+	padding-bottom:5px;
+}
+-->
+</style>
+</head>
+
+<body>
+	<div style="padding:10px;">
+		<p>
+			<span style="font-size:14pt;">AJLogin v4.1 Help File</span><br />
+	  		<span style="font-size:9pt;"><em>Adam Jarret</em></span><br />
+			<span style="font-size:9pt;"><em>adamjarret.com</em></span>
+		</p>
+		
+		<p>
+			AJLogin is a user management script written in classic ASP that can be very easily
+			integrated into existing web sites. The script uses a <strong>Microsoft Access</strong> database to 
+			store member account details and session variables to determine if a site visitor is logged-in. 
+			Your web host must support <strong>ASP</strong> and <strong>ADODB</strong> in order to use AJLogin. In order to use any
+			of the features involving e-mail, your web host must also support <strong>CDONTS</strong> or <strong>CDOSYS</strong>.	
+		</p>
+		
+		<p>
+			The script allows visitors to your site to register for membership in order to 
+			access &quot;members only&quot; pages that you designate. Over the years, the feature list has been expanded 
+			to include:
+			<ul>
+				<li>A browser-based control panel for site admins</li>
+				<li>Optional e-mail address verification for new members</li>
+				<li>&quot;Keep me logged-in&quot; functionality</li>
+				<li>Fully automated password reminder e-mails</li>
+				<li>A built in messaging system that allows for quick and painless group e-mails to the members of your site.</li>
+			</ul>
+		</p>
+		
+		<p>	
+			Please keep in mind that <strong>protected pages must use the <span class="code">.asp</span> file
+			extension</strong> (e.g. <span class="code">members.asp</span> as opposed to <span class="code">members.htm</span> or <span class="code">members.html</span>).
+			Don't be afraid to change the extension of existing <span class="code">.htm</span> and <span class="code">.html</span> files to <span class="code">.asp</span> for the purposes of protecting them; the pages will display exactly the same (but you should obviously take care to update all links that point to the page). 
+			Instructions for protecting pages can be found below.
+		</p>
+	
+		<br />
+
+		<strong>CONFIGURING/INSTALLING AJLOGIN</strong>
+		<ol>
+			<li>Edit the <span class="code">inc_common.asp</span> file, setting appropriate preferences and site properties as instructed by the descriptive notes within the file.</li>
+			<li>Upload all files to your web server. It is usually a good idea to keep all the AJLogin files (except the database) together in one folder, separate from other existing site files.</li>
+			<li>Move the database to an offline folder for security purposes. Make sure that both the database and the parent folder of the database have <strong>permissions set to allow read and write</strong>.</li>
+		</ol>
+		
+		<br />
+
+		<strong>USING AJLOGIN</strong>
+		<ul>
+			<li>
+				To protect an ASP page (that resides in the same folder as the AJLogin files) so that only members of your site can access it, paste the following code at the top of the page:<br />
+				<p class="code" style="margin:0px; padding-top:5px;">
+					&lt;!--#INCLUDE file=&quot;inc_common.asp&quot;--&gt;
+					&lt;% RestrictPageAccesToLevel(1) %&gt;<br />
+				</p>
+			</li>
+			<li>
+				The value passed to the <span class="code">RestrictPageAccesToLevel</span> function (in this case: 1) dictates what access level a member 
+				must have in order to view the page. All new members default to level 1 and then can be
+				promoted to higher security clearances using the admin control panel. You may use as many different
+				access levels as you need, but the standard configuration is to use level 1 as a regular member, level 2 as a site moderator and level 3 as a site admin.
+			</li>
+			<li>
+				To protect an ASP page (that resides in the same folder as the AJLogin files) so that only site administrators can access it, include the following code at the top of the page:<br />
+				<p class="code" style="margin:0px; padding-top:5px;">
+					&lt;!--#INCLUDE file=&quot;inc_common.asp&quot;--&gt;
+					&lt;% RestrictPageAccesToLevel(ajlogin_adminlevel) %&gt;<br />
+				</p>
+			</li>
+			<li>
+				To protect pages outside of the directory containing the AJLogin files, change the code that reads <span class="code">#INCLUDE file</span> to <span class="code">#INCLUDE virtual</span>. You also must preface the included file name with the full virtual path to the file. An example that assumes the AJLogin files are in a directory called 'ajlogin' in the site's root directory would look like this:<br />
+				<p class="code" style="margin:0px; padding-top:5px;">&lt;!--#INCLUDE virtual=&quot;/ajlogin/inc_common.asp&quot;--&gt;</span><br />
+			</li>
+		</ul>
+		
+		<hr />
+		<div align="center">
+			<p><em>Any questions/bugs/compliments can be sent to adam@adamjarret.com</em></p>
+			<p>Thanks for using AJLogin!</p>
+		</div>
+		<hr />
+	</div>
+</body>
+</html>
