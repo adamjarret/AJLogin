@@ -72,7 +72,7 @@
 	
 		<div class="utility-form-bottom-links-div">	
 			<a href="<%=ajlogin_scripturl%>login.asp">Return to Log In page</a>.
-			Need to <a href="<%=ajlogin_scripturl%>reg.asp">create an account</a>?
+			<% if ajlogin_enableregistration then %>Need to <a href="<%=ajlogin_scripturl%>reg.asp">create an account</a>?<% end if %>
 		</div>
 	<% end if %>
 

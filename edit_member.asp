@@ -48,6 +48,8 @@
 					strStatusMessage = "This E-mail address has already been registered."
 				case -2
 					strStatusMessage = "This user name is unavailable."
+				case -3
+					strStatusMessage = "User registration has been disabled."
 			end select
 		else		
 			if oForm.Mode = "ADMINNEW" then

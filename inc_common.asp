@@ -664,6 +664,11 @@ Class MemberForm
 	End Sub
 	
 	Public Function SaveFormData
+	
+		if Mode = "REGISTER" and not ajlogin_enableregistration then
+			SaveFormData = -3
+			Exit Function
+		end if
 
 		if IsEmpty(EditMember) then
 			Set EditMember = New Member

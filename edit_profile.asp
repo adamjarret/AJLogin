@@ -36,6 +36,8 @@
 					strStatusMessage = "This e-mail address has already been registered to another account. Do you need to <a href=""forgot_password.asp"">reset the password</a> to that account?"
 				case -2
 					strStatusMessage = "This user name is unavailable."
+				case -3
+					strStatusMessage = "User registration has been disabled."
 			end select
 		else		
 			strStatusMessage = "Your profile has been updated."

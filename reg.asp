@@ -6,6 +6,13 @@
 
 <!--#INCLUDE file="inc_common.asp"-->
 
+<%
+' Uncomment this to redirect to the login page when ajlogin_enableregistration is false.
+'	When this is commented, if a user were to visit reg.asp they would see the form but
+'	be presented with an error when they submit it. 
+'if not ajlogin_enableregistration then Response.Redirect "login.asp"
+%>
+
 <% PageTitle = "Please Register" %>
 <!--#INCLUDE file="inc_header.asp"-->
 
@@ -30,6 +37,8 @@
 					strStatusMessage = "This E-mail address has already been registered. Do you need to <a href=""forgot_password.asp"">reset your password</a>?"
 				case -2
 					strStatusMessage = "This user name is unavailable."
+				case -3
+					strStatusMessage = "User registration has been disabled."
 			end select
 			%>
 			<div class="status">

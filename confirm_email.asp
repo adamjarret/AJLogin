@@ -58,7 +58,8 @@ end if
 
 		<div class="utility-form-bottom-links-div">
 	    	Return to <a href="<%=ajlogin_scripturl%>login.asp">Log In</a> page.
-	    	Need to <a href="<%=ajlogin_scripturl%>reg.asp">create an account</a>?
+			<% if ajlogin_enableregistration then %>Need to <a href="<%=ajlogin_scripturl%>reg.asp">create an account</a>?<% end if %>
+
 		</div>
 
 <!--#INCLUDE file="inc_footer.asp"-->

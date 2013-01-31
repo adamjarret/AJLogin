@@ -51,6 +51,9 @@ ajlogin_adminurl = ajlogin_scripturl & "admin.asp"
 'ajlogin_adminlevel is the highest level that the admins have
 ajlogin_adminlevel = 3
 
+'whether or not to allow new members to register (hides links to registration page and prevents new accounts being created via reg.asp) 
+ajlogin_enableregistration = true
+
 'if ajlogin_requireapproval is set to true, new accounts must be approved by an admin before they are allowed to log in
 ajlogin_requireapproval = true
 

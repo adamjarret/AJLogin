@@ -107,10 +107,8 @@ end select
   		</div>
   		
 		<div class="utility-form-bottom-links-div">
-			<% if ajlogin_sendpassword then %>
-			<a href="<%=ajlogin_scripturl%>forgot_password.asp">Forgot your password</a>?
-			<% end if %>
-			Need to <a href="<%=ajlogin_scripturl%>reg.asp">create an account</a>?
+			<% if ajlogin_sendpassword then %><a href="<%=ajlogin_scripturl%>forgot_password.asp">Forgot your password</a>?<% end if %>
+			<% if ajlogin_enableregistration then %>Need to <a href="<%=ajlogin_scripturl%>reg.asp">create an account</a>?<% end if %>
 		</div>
 
 
