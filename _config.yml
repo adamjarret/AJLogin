@@ -1,0 +1,9 @@
+name: Adam Jarret
+markdown: redcarpet
+highlighter: pygments
+time: 2014-03-29 4:24:00
+safe: true
+lsi: false
+exclude: [Gemfile, Gemfile.lock]
+url: https://adamjarret.github.io/AJLogin
+baseurl: /AJLogin

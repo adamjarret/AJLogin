@@ -1,0 +1,100 @@
+#container.container-ajlogin {
+  width: 740px;
+  margin: 0 20px 0 40px;
+}
+#container.container-ajlogin p,
+#container.container-ajlogin h1,
+#container.container-ajlogin h2,
+#container.container-ajlogin h3,
+#container.container-ajlogin h4,
+#container.container-ajlogin h5,
+#container.container-ajlogin h6 {
+  font-family: trebuchet ms, tahoma, verdana, arial, helvetica;
+}
+#container.container-ajlogin h1 {
+  font-size: 24pt;
+}
+#container.container-ajlogin h2 {
+  font-size: 18pt;
+}
+#container.container-ajlogin h3 {
+  font-size: 16pt;
+}
+#container.container-ajlogin h4 {
+  font-size: 14pt;
+}
+#container.container-ajlogin pre > code {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  display: block;
+  color: #FFFFFF;
+  background: #222222;
+  padding: 10px;
+}
+#container.container-ajlogin code {
+  font-family: Courier, monospace;
+}
+#container.container-ajlogin a,
+#container.container-ajlogin a:link,
+#container.container-ajlogin a:active {
+  color: #930;
+}
+#container.container-ajlogin a:visited {
+  color: #630;
+}
+#container.container-ajlogin #header {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #444444;
+}
+#container.container-ajlogin #header h1 {
+  margin-bottom: 0;
+}
+#container.container-ajlogin #header h1 a {
+  text-decoration: none;
+  font-weight: bold;
+}
+#container.container-ajlogin #header .tagline {
+  font-style: italic;
+  color: #333333;
+}
+#container.container-ajlogin #header ul.main-links {
+  margin-top: 20px;
+}
+#container.container-ajlogin #header ul.main-links li {
+  float: left;
+  margin-right: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #000000;
+}
+#container.container-ajlogin #header ul.main-links li a.active {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+#container.container-ajlogin #header ul.main-links li.omega {
+  border-right: none;
+}
+#container.container-ajlogin #content ul.features {
+  margin-left: 40px;
+  text-indent: 10px;
+}
+#container.container-ajlogin #content ul.features li {
+  list-style: circle;
+}
+#container.container-ajlogin #content .faq-title a {
+  font-weight: bold;
+  text-decoration: none;
+}
+#container.container-ajlogin #content .faq-body pre > code {
+  width: 700px;
+  overflow: auto;
+}
+#container.container-ajlogin #footer {
+  border-top: 1px solid #444444;
+  padding-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-align: left;
+}

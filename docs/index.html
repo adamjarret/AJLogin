@@ -1,0 +1,37 @@
+---
+layout: default
+slug: docs
+---
+<h2>Documentation</h2>
+
+<h3 id="install">Installing/Configuring AJLogin</h3> 
+
+<ol> 
+<li>Create a copy of the <em>inc_config.sample.asp</em> file called <em>inc_config.asp</em> and set appropriate preferences and site properties as instructed by the descriptive notes within the file.</li> 
+<li>Visit the <em>install.asp</em> to create your admin account and then <strong>IMMEDIATELY DELETE THE <em>INSTALL.ASP</em> FILE</strong>.</li> 
+<li>Upload all files to your web server. It is usually a good idea to keep all the AJLogin files (except the database) together in one folder, separate from other existing site files.</li> 
+<li>Move the database to an offline folder for security purposes. Make sure that both the database and the parent folder of the database have <strong>permissions set to allow read and write</strong>.</li> 
+</ol>
+
+<h3 id="use">Using AJLogin</h3> 
+
+<p>To protect an ASP page (that resides in the same folder as the AJLogin files) so that only members of your site can access it, paste the following code at the top of the page:</p> 
+
+<pre><code>&lt;!--#INCLUDE file="inc_common.asp"--&gt;
+&lt;% RestrictPageAccesToLevel(1) %&gt;
+</code></pre> 
+
+<p>The value passed to the <em>RestrictPageAccesToLevel</em> function (in this case: 1) dictates what access level a member must have in order to view the page. All new members default to level 1 and then can be promoted to higher security clearances using the admin control panel. You may use as many different access levels as you need, but the standard configuration is to use level 1 as a regular member, level 2 as a site moderator and level 3 as a site admin.</p> 
+
+<p>To protect an ASP page (that resides in the same folder as the AJLogin files) so that only site administrators can access it, include the following code at the top of the page:</p> 
+
+<pre><code>&lt;!--#INCLUDE file="inc_common.asp"--&gt;
+&lt;% RestrictPageAccesToLevel(ajlogin_adminlevel) %&gt;
+</code></pre> 
+
+<p>To protect pages outside of the directory containing the AJLogin files, change the code that reads <em>#INCLUDE file</em> to <em>#INCLUDE virtual</em>. You also must preface the included file name with the full virtual path to the file. An example that assumes the AJLogin files are in a directory called "ajlogin" in the site's root directory would look like this:</p> 
+
+<pre><code>&lt;!--#INCLUDE virtual="/AJLogin/inc_common.asp"--&gt;
+</code></pre> 
+
+<p>Any questions/bugs/compliments can be sent to adam (at) adamjarret.com.</p>

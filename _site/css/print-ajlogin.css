@@ -1,0 +1,80 @@
+@media print {
+
+  h1 {
+    font-size: 22pt;
+  }
+  h2 {
+    font-size: 16pt;
+  }
+  h3 {
+    font-size: 14pt;
+  }
+  h4 {
+    font-size: 13pt;
+  }
+  h5 {
+    font-size: 12pt;
+  }
+  h6 {
+    font-size: 11pt;
+  }
+  p,
+  li {
+    font-size: 10pt;
+  }
+  ul,
+  ol {
+    margin-left: 0px;
+  }
+  ul li,
+  ol li {
+    margin-left: 0px;
+  }
+  a:link,
+  a:visited {
+    color: #222;
+    background: transparent;
+    font-weight: bold;
+  }
+  .valid-markup {
+    display: none;
+  }
+  body #container {
+    margin-top: 0px !important;
+  }
+  body #container p {
+    margin-bottom: 6px;
+  }
+  body #container #header #header-tab-bar {
+    display: none;
+  }
+  body #container #header #header-content .header-title {
+    font-size: 14pt;
+    margin-bottom: 0 !important;
+    display: inline;
+  }
+  .main-links {
+    display: none;
+  }
+  #content {
+    margin-top: 20px;
+  }
+  #content a:link:after,
+  #content a:visited:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+  }
+  #content .faq-title a:link:after,
+  #content .faq-title a:visited:after {
+    content: "";
+  }
+  #content blockquote p {
+    font-size: 10pt;
+    color: #333333;
+  }
+  #footer a:link:after,
+  #footer a:visited:after {
+    content: " (http://atj.me)";
+    font-size: 10pt;
+  }
+}
